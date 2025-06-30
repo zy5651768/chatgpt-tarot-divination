@@ -35,8 +35,8 @@ class Settings(BaseSettings):
     # rate limit settings
     enable_rate_limit: bool = True
     # rate limit xxx request per xx seconds
-    rate_limit: Tuple[int, int] = (60, 60 * 60)
-    user_rate_limit: Tuple[int, int] = (600, 60 * 60)
+    rate_limit: Tuple[int, int] = (6, 60 * 60)
+    user_rate_limit: Tuple[int, int] = (60, 60 * 60)
 
     def get_human_rate_limit(self) -> str:
         max_reqs, time_window_seconds = self.rate_limit
